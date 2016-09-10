@@ -3,11 +3,13 @@
  "allow_import": 0, 
  "allow_rename": 0, 
  "autoname": "SLE/.########", 
+ "beta": 0, 
  "creation": "2013-01-29 19:25:42", 
  "custom": 0, 
  "docstatus": 0, 
  "doctype": "DocType", 
  "document_type": "Other", 
+ "editable_grid": 0, 
  "fields": [
   {
    "allow_on_submit": 0, 
@@ -618,13 +620,14 @@
  "hide_toolbar": 1, 
  "icon": "icon-list", 
  "idx": 1, 
+ "image_view": 0, 
  "in_create": 1, 
  "in_dialog": 0, 
  "is_submittable": 0, 
  "issingle": 0, 
  "istable": 0, 
  "max_attachments": 0, 
- "modified": "2016-03-29 13:26:08.241138", 
+ "modified": "2016-07-18 22:40:08.460539", 
  "modified_by": "Administrator", 
  "module": "Stock", 
  "name": "Stock Ledger Entry", 
@@ -671,6 +674,7 @@
    "write": 0
   }
  ], 
+ "quick_entry": 0, 
  "read_only": 0, 
  "read_only_onload": 0, 
  "sort_field": "modified", 

@@ -8,6 +8,7 @@
  "docstatus": 0, 
  "doctype": "DocType", 
  "document_type": "Setup", 
+ "editable_grid": 0, 
  "fields": [
   {
    "allow_on_submit": 0, 
@@ -802,13 +803,14 @@
  "hide_toolbar": 0, 
  "icon": "icon-sitemap", 
  "idx": 1, 
+ "image_view": 0, 
  "in_create": 0, 
  "in_dialog": 0, 
  "is_submittable": 1, 
  "issingle": 0, 
  "istable": 0, 
  "max_attachments": 0, 
- "modified": "2016-05-13 18:28:53.557967", 
+ "modified": "2016-07-18 22:39:55.389362", 
  "modified_by": "Administrator", 
  "module": "Manufacturing", 
  "name": "BOM", 

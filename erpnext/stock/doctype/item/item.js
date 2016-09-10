@@ -77,8 +77,8 @@ frappe.ui.form.on("Item", {
 
 		erpnext.item.toggle_attributes(frm);
 
-		frm.toggle_enable("is_fixed_asset", (frm.doc.__islocal || (!frm.doc.is_stock_item &&
-			((frm.doc.__onload && frm.doc.__onload.asset_exists) ? false : true))));
+		frm.toggle_enable("is_fixed_asset", !frm.doc.is_stock_item &&
+			((frm.doc.__onload && frm.doc.__onload.asset_exists) ? false : true));
 	},
 
 	validate: function(frm){
@@ -95,6 +95,10 @@ frappe.ui.form.on("Item", {
 		}
 	},
 	
+	is_stock_item: function(frm) {
+		frm.toggle_enable("is_fixed_asset", !frm.doc.is_stock_item);
+	},
+
 	page_name: frappe.utils.warn_page_name_change,
 
 	item_code: function(frm) {
@@ -183,17 +187,11 @@ $.extend(erpnext.item, {
 
 		frm.fields_dict.reorder_levels.grid.get_field("warehouse").get_query = function(doc, cdt, cdn) {
 			var d = locals[cdt][cdn];
-			
-			var filters = {
-				"is_group": 0
-			}
-			
-			if (d.parent_warehouse) {
-				filters.extend({"parent_warehouse": d.warehouse_group})
-			}
-			
 			return {
-				filters: filters
+				filters: {
+					"is_group": 0,
+					"parent_warehouse": d.warehouse_group
+				}
 			}
 		}
 

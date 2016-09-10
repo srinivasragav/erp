@@ -9,6 +9,7 @@
  "docstatus": 0, 
  "doctype": "DocType", 
  "document_type": "Document", 
+ "editable_grid": 0, 
  "fields": [
   {
    "allow_on_submit": 0, 
@@ -740,7 +741,7 @@
  "issingle": 0, 
  "istable": 0, 
  "max_attachments": 0, 
- "modified": "2016-07-05 12:54:38.585259", 
+ "modified": "2016-07-18 22:39:57.569398", 
  "modified_by": "Administrator", 
  "module": "Accounts", 
  "name": "Asset", 
